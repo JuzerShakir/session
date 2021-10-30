@@ -1,0 +1,39 @@
+<% if current_visitor %>
+
+  <%= flash[:success] %>
+
+  <h1> Congrats! </h1>
+  <p>You have successfully signed in with this email: <%= @email %> </p>
+  <p><%= pluralize(@total, "Visitor") %> signed up.</p>
+
+  <p>Source code available <%= link_to 'here', "" %>.</p>
+  <p>My Next <%= link_to 'project', "" %>.</p>
+
+  <br>
+
+  <%= link_to 'Logout', :logout, method: "delete" %>
+
+<% else %>
+
+  <%= flash[:notice] %>
+
+  <h1>Hey Devs!</h1>
+  <h2>Welcome to my First Portfolio</h2>
+  <p>In this project, I demonstrate how to implement a session on a Rails site using the default session store, the 'CookieStore'.</p>
+
+  <p>To see this working, <%= link_to "Sign Up", :new_visitor %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
+
+  <p>After signing up, you will be redirected to this page but now you will no longer be able to see this content until you sign out.</p>
+
+  <br>
+
+  <p><%= pluralize(@total, "Visitor") %> already signed up.</p>
+
+  <br>
+
+  <p>Already signed up before?
+  <%= link_to 'Login', :login %></p>
+
+<% end %>
+
+

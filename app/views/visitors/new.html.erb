@@ -1,0 +1,49 @@
+<br>
+<br>
+
+<% if @visitor.errors.full_messages.any? %>
+
+  <ul>
+    <% @visitor.errors.messages.each do | field, messages | %>
+      <li> <%= field %> </li>
+      <ol>
+        <% messages.each do | message | %>
+          <li><%= message %></li>
+        <% end %>
+      </ol>
+    <% end %>
+  </ul>
+
+  <% @visitor.errors.clear %>
+<% end %>
+
+<br>
+
+<%= form_with model: @visitor do | field | %>
+  <%= label_tag :email %><br>
+  <%= field.email_field :email %>
+
+  <br>
+  <br>
+
+  <%= label_tag :password %><br>
+  <%= field.password_field :password %>
+
+  <br>
+  <br>
+
+  <%= label_tag :confirm_password %><br>
+  <%= field.password_field :password_confirmation %>
+
+  <br>
+  <br>
+
+  <%= field.submit %>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to 'Login', :login %>
+<br>
+<%= link_to "Home", :root %>

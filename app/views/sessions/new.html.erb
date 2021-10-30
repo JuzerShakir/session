@@ -1,0 +1,29 @@
+<br>
+<br>
+
+<%= flash["error"] %>
+
+<br>
+
+<%= form_with model: @visitor do | field | %>
+  <%= label_tag :email %><br>
+  <%= field.email_field :email %>
+
+  <br>
+  <br>
+
+  <%= label_tag :password %><br>
+  <%= field.password_field :password %>
+
+  <br>
+  <br>
+
+  <%= field.submit 'Sign In' %>
+<% end %>
+
+<br>
+<br>
+
+<%= link_to "Sign Up", :new_visitor %>
+<br>
+<%= link_to "Home", :root %>
