@@ -4,9 +4,13 @@
 
   <h2><%= flash[:success] %></h2>
 
-  <p>Your email: <%= @email %> </p>
+  <p>Congrats, a session has been successully created!</p>
+  <p>The session will reset after you logout.</p>
+  <p>Registered email: <%= @email %> </p>
   <p><%= pluralize(@total, "Visitor") %> signed up.</p>
+
   <br>
+
   <p>Source code available <%= link_to 'here', "https://github.com/JuzerShakir/Session-CookieStore", target: :_blank %>.</p>
   <p>My Next <%= link_to 'project', "", target: :_blank %>.</p>
 
