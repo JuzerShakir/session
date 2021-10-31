@@ -20,7 +20,7 @@ class VisitorsController < ApplicationController
       redirect_to :root
 
     elsif Visitor.exists?(email: @visitor.email)
-      flash[:warning] = "You've already signed up before, Log In to coninue.."
+      flash[:warning] = "#{@visitor.email} is already in use! You can Log In with this email."
       redirect_to :login
 
     else
