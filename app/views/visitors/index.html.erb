@@ -1,6 +1,8 @@
+<h1>Session & Cookie</h1>
+
 <% if current_visitor %>
 
-  <h1><%= flash[:success] %></h1>
+  <h2><%= flash[:success] %></h2>
 
   <p>Your email: <%= @email %> </p>
   <p><%= pluralize(@total, "Visitor") %> signed up.</p>
@@ -16,8 +18,7 @@
 
   <%= flash[:notice] %>
 
-  <h1>Hey Devs!</h1>
-  <h2>Welcome to my First Portfolio</h2>
+  <h2>Hey Devs, Welcome to my First Portfolio</h2>
   <p>In this project, I demonstrate how to implement a session on a Rails site using the default session store, the 'CookieStore'.</p>
 
   <p>To see this working, <%= link_to "Sign Up", :new_visitor %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
