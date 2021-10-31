@@ -1,6 +1,4 @@
-<% if current_visitor %>
-
-  <h2><%= flash[:success] %></h2>
+<% if @current_visitor %>
 
   <p>The session will reset after you logout.</p>
   <p>Registered email: <%= @current_visitor[:email] %> </p>
@@ -16,8 +14,6 @@
   <%= link_to 'Logout', :logout, method: "delete" %>
 
 <% else %>
-
-  <%= flash[:notice] %>
 
   <h2>Hey Devs, Welcome to my First Portfolio</h2>
   <p>In this project, I demonstrate how to implement a session on a Rails site using the default session store, the 'CookieStore'.</p>

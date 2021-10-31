@@ -10,24 +10,24 @@ class SessionsController < ApplicationController
     if visitor && visitor.authenticate(params[:password])
       # ..then set the session
       session[:id] = visitor.id
-      flash[:success] = "Welcome Back! A session has been created."
+      flash.now[:success] = "Welcome Back! A session has been created."
       # home page
       redirect_to :root
 
     # if any input fields are blank
     elsif params[:email].blank? || params[:password].blank?
-      flash[:error] = "Fields cannot be empty!"
+      flash.now[:danger] = "Fields cannot be empty!"
       render :new
 
     # if email enetered is not in our database
     elsif visitor == nil
-      flash[:error] = "Email doesn't exist! Please Sign up!"
+      flash.now[:danger] = "Email doesn't exist! Please Sign up!"
       # .. then redirect them to signup page
       redirect_to :new_visitor
 
     # or else entered password is wrong
     else
-      flash[:error] = "Email exists but the password entered is wrong! Retry!"
+      flash.now[:danger] = "Email exists but the password entered is wrong! Retry!"
       render :new
     end
   end
@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
     session.delete(:id)
     @current_visitor = nil
 
-    flash[:notice] = "You have successfully logged out."
+    flash.now[:info] = "You have successfully logged out."
     redirect_to :root
   end
 end

@@ -1,44 +1,42 @@
-<% if @visitor.errors.full_messages.any? %>
-<br>
-<br>
-  <ul>
-    <% @visitor.errors.messages.each do | field, messages | %>
-      <li> <%= field %> </li>
-      <ol>
-        <% messages.each do | message | %>
-          <li><%= message %></li>
-        <% end %>
-      </ol>
-    <% end %>
-  </ul>
-
-  <% @visitor.errors.clear %>
-<% end %>
-
-<br>
-
 <div class="row">
   <div class="col-md-4 col-md-offset-4">
+
+    <% if @visitor.errors.full_messages.any? %>
+      <div id="error_explanation">
+
+        <!-- Total error count -->
+        <div class="alert alert-danger">
+          The form contains <%= pluralize(@visitor.errors.count, "error") %>.
+        </div>
+
+        <% @visitor.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </div>
+
+      <% @visitor.errors.clear %>
+
+      <br>
+    <% end %>
+
     <%= form_with model: @visitor do | field | %>
       <%= label_tag :email %><br>
       <%= field.email_field :email %>
 
-      <br>
-      <br>
+      <br><br>
 
       <%= label_tag :password %><br>
       <%= field.password_field :password %>
 
-      <br>
-      <br>
+      <br><br>
 
       <%= label_tag :confirm_password %><br>
       <%= field.password_field :password_confirmation %>
 
-      <br>
-      <br>
+      <br><br>
 
       <%= field.submit class: "btn btn-primary" %>
     <% end %>
+
   </div>
 </div>
