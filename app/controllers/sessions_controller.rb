@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     visitor = Visitor.find_by_email(params[:email])
     if visitor && visitor.authenticate(params[:password])
       session[:id] = visitor.id
-      flash[:success] = "Welcome Back!"
+      flash[:success] = "Welcome Back! A session has been created."
       redirect_to :root
 
     elsif visitor == nil

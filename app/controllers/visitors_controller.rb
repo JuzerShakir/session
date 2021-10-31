@@ -17,7 +17,7 @@ class VisitorsController < ApplicationController
     if @visitor.valid?
       @visitor.save
       session[:id] = @visitor.id
-      flash[:success] = "Congrats! You have successfully logged in."
+      flash[:success] = "Congrats! You have successfully logged in and a session has been created."
       redirect_to :root
 
     elsif Visitor.exists?(email: @visitor.email)
