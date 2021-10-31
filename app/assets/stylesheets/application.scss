@@ -33,6 +33,11 @@
   text-decoration: none;
 }
 
+.navbar-right {
+  display: flex;
+  justify-content: right;
+}
+
 body {
   padding-top: 6.4em;
 }
