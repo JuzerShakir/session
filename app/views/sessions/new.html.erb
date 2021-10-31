@@ -3,18 +3,23 @@
 
 <br>
 
-<%= form_with model: @visitor do | field | %>
-  <%= label_tag :email %><br>
-  <%= field.email_field :email %>
 
-  <br>
-  <br>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_with model: @visitor do | field | %>
+      <%= label_tag :email %><br>
+      <%= field.email_field :email %>
 
-  <%= label_tag :password %><br>
-  <%= field.password_field :password %>
+      <br>
+      <br>
 
-  <br>
-  <br>
+      <%= label_tag :password %><br>
+      <%= field.password_field :password %>
 
-  <%= field.submit 'Sign In' %>
-<% end %>
+      <br>
+      <br>
+
+      <%= field.submit 'Sign In', class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
