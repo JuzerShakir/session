@@ -1,8 +1,10 @@
-<br>
+<%= link_to "Home", :root %>
+
 <br>
 
 <% if @visitor.errors.full_messages.any? %>
-
+<br>
+<br>
   <ul>
     <% @visitor.errors.messages.each do | field, messages | %>
       <li> <%= field %> </li>
@@ -16,6 +18,8 @@
 
   <% @visitor.errors.clear %>
 <% end %>
+
+<h4><%= flash[:error] %></h4>
 
 <br>
 
@@ -40,10 +44,3 @@
 
   <%= field.submit %>
 <% end %>
-
-<br>
-<br>
-
-<%= link_to 'Login', :login %>
-<br>
-<%= link_to "Home", :root %>

@@ -1,7 +1,9 @@
-<br>
+<%= link_to "Home", :root %>
+
 <br>
 
-<%= flash["error"] %>
+<h4><%= flash["error"] %></h4>
+<h4><%= flash["notice"] %></h4>
 
 <br>
 
@@ -20,10 +22,3 @@
 
   <%= field.submit 'Sign In' %>
 <% end %>
-
-<br>
-<br>
-
-<%= link_to "Sign Up", :new_visitor %>
-<br>
-<%= link_to "Home", :root %>
