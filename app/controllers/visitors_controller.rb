@@ -19,6 +19,11 @@ class VisitorsController < ApplicationController
       session[:id] = @visitor.id
       flash[:success] = "Congrats! You have successfully logged in."
       redirect_to :root
+
+    elsif Visitor.exists?(email: @visitor.email)
+      redirect_to :login
+      flash[:notice] = "Email already exists! Please sign in! "
+
     else
       render :new
     end

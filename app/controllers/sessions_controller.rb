@@ -8,8 +8,13 @@ class SessionsController < ApplicationController
       session[:id] = visitor.id
       flash[:success] = "Welcome Back!"
       redirect_to :root
+
+    elsif visitor == nil
+      flash[:error] = "Email doesn't exist! Please Sign up!"
+      redirect_to :new_visitor
+
     else
-      flash[:error] = "Wrong Credentials! Try Again!"
+      flash[:error] = "Password is wrong! Retry!"
       render :new
     end
   end
