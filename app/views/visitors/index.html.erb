@@ -1,5 +1,3 @@
-<h1>Session & Cookie</h1>
-
 <% if current_visitor %>
 
   <h2><%= flash[:success] %></h2>
@@ -32,13 +30,4 @@
 
   <p><%= pluralize(@total, "Visitor") %> already signed up.</p>
 
-  <br>
-
-  <p>Already signed up before?
-  <%= link_to 'Login', :login %></p>
-
 <% end %>
-
-<br>
-
-<p> Developed by <%= link_to 'Juzer Shakir', "https://juzershakir.github.io/", target: :_blank %></p>

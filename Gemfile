@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # for styling web pages
-gem 'bootstrap'
+gem 'bootstrap-sass'
 # for renaming rails app
 gem 'rename'
 # Use Active Storage variant
