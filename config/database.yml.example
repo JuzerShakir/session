@@ -6,8 +6,9 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
+  host: localhost
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
 
 development:
   <<: *default
@@ -18,8 +19,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: session_cookie_store_development
+  database: session_cookie_store_test
 
 production:
   <<: *default
-  database: session_cookie_store_development
+  database: session_cookie_store_production
