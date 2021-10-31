@@ -1,8 +1,7 @@
 <% if current_visitor %>
 
-  <%= flash[:success] %>
+  <h1><%= flash[:success] %></h1>
 
-  <h1> Congrats! </h1>
   <p>Your email: <%= @email %> </p>
   <p><%= pluralize(@total, "Visitor") %> signed up.</p>
   <br>
