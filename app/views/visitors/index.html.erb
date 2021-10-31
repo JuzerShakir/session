@@ -3,9 +3,9 @@
   <%= flash[:success] %>
 
   <h1> Congrats! </h1>
-  <p>You have successfully signed in with this email: <%= @email %> </p>
+  <p>Your email: <%= @email %> </p>
   <p><%= pluralize(@total, "Visitor") %> signed up.</p>
-
+  <br>
   <p>Source code available <%= link_to 'here', "" %>.</p>
   <p>My Next <%= link_to 'project', "" %>.</p>
 
@@ -36,4 +36,6 @@
 
 <% end %>
 
+<br>
 
+<p> Developed by <%= link_to 'Juzer Shakir', "https://juzershakir.github.io/", target: :_blank %></p>
