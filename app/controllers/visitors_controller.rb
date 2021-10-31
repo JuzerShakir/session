@@ -2,9 +2,8 @@ class VisitorsController < ApplicationController
 
   def index
     @total = Visitor.count
-    if current_visitor
-      @email = @current_visitor.email
-    end
+    # will run method located in application_controller, will return nil for logged out user
+    current_visitor
   end
 
   def new

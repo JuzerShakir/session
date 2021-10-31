@@ -5,7 +5,7 @@
   <h2><%= flash[:success] %></h2>
 
   <p>The session will reset after you logout.</p>
-  <p>Registered email: <%= @email %> </p>
+  <p>Registered email: <%= @current_visitor[:email] %> </p>
   <p><%= pluralize(@total, "Visitor") %> signed up.</p>
 
   <br>
