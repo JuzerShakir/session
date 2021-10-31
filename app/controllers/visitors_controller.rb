@@ -16,6 +16,7 @@ class VisitorsController < ApplicationController
 
     if @visitor.valid?
       @visitor.save
+      session[:id] = @visitor.id
       flash[:success] = "You have successfully logged in."
       redirect_to :root
     else
