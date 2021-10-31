@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     visitor = Visitor.find_by_email(params[:email])
     if visitor && visitor.authenticate(params[:password])
       session[:id] = visitor.id
-      flash[:success] = "You have successfully logged in."
+      flash[:success] = "Welcome Back!"
       redirect_to :root
     else
       flash[:error] = "Wrong Credentials! Try Again!"
