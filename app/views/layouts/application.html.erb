@@ -12,7 +12,12 @@
 
   <body>
 
-    <%= render 'layouts/header' %>
+    <% if @current_visitor %>
+      <%= render 'layouts/signin-header' %>
+    <% else %>
+      <%= render 'layouts/header' %>
+    <% end %>
+
 
     <div class='container'>
       <% flash.each do |message_type, message| %>
