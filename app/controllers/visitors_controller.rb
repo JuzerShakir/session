@@ -22,7 +22,7 @@ class VisitorsController < ApplicationController
 
     elsif Visitor.exists?(email: @visitor.email)
       redirect_to :login
-      flash[:notice] = "Email already exists! Please sign in! "
+      flash[:notice] = "Email already exists! Please sign in!"
 
     else
       render :new
