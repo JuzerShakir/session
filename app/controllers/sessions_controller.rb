@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if visitor && visitor.authenticate(params[:password])
       # ..then set the session
       session[:id] = visitor.id
-      flash.now[:success] = "Welcome Back! A session has been created."
+      flash[:success] = "Welcome Back! A session has been created."
       # home page
       redirect_to :root
 
@@ -21,7 +21,7 @@ class SessionsController < ApplicationController
 
     # if email enetered is not in our database
     elsif visitor == nil
-      flash.now[:danger] = "Email doesn't exist! Please Sign up!"
+      flash[:danger] = "Email doesn't exist! Please Sign up!"
       # .. then redirect them to signup page
       redirect_to :new_visitor
 
@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
     session.delete(:id)
     @current_visitor = nil
 
-    flash.now[:info] = "You have successfully logged out."
+    flash[:info] = "You have successfully logged out."
     redirect_to :root
   end
 end

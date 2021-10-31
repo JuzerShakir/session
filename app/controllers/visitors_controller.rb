@@ -16,12 +16,12 @@ class VisitorsController < ApplicationController
     if @visitor.valid?
       @visitor.save
       session[:id] = @visitor.id
-      flash.now[:success] = "Congrats! You have successfully logged in and a session has been created."
+      flash[:success] = "Congrats! You have successfully logged in and a session has been created."
       redirect_to :root
 
     elsif Visitor.exists?(email: @visitor.email)
+      flash[:warning] = "You've already signed up before, Log In to coninue.."
       redirect_to :login
-      flash.now[:warning] = "You've already signed up before, Log In to coninue.."
 
     else
       render :new
