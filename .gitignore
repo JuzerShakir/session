@@ -40,4 +40,4 @@ yarn-debug.log*
 .yarn-integrity
 config/database.yml
 
-project_logo.png
+#project_logo.png
