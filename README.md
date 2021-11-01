@@ -14,7 +14,7 @@ This web-app must accomplish the following:
 - [x] Use PostgreSQL database which stores email and password of a visitor...
 - [x] Only valid email formats is allowed and it should be unique.
 - [x] Use BCrypt gem to store secure hash password and it should be atleast 6 to 36 characters long.
-- [x] Show validation error messages to visitors if any.
+- [x] Show validation error messages (if any) to signing in visitors.
 - [x] Create Session using CookieStore as soon as visitors sign up.
 - [x] Show different homepage content for signed in and non-signed in visitors.
 - [x] If visitor logs in with an email that doesn't exist in database then redirect them to signup page.
@@ -29,27 +29,16 @@ This web-app must accomplish the following:
 
 ## 💎 Required Gems
 
-**This project was built on Ruby version *x*.**
+**This project was built on Ruby version *2.7.2*.**
 
-Following gems were installed in these versions to execute the functionality:
+Following important gems were installed in these versions:
 
 |  **Gem Names**  |         **Gem**         | **Version** |                      **Use**                     |
 | :------------:  |     :------------:      | :---------: |                    :---------:                   |
-|      Rails      |        _'rails'_        |  **_____**  |    *Use for executing and rendering web-app*     |
-|   Postgresql    |          _'pg'_         |  **_____**  | *Use postgres as the database for Active Record* |
-|     SQLite      |        _'sqlite3'_      |  **_____**  | *Use sqlite3 as the database for Active Record*  |
-|    Bootstrap    |      _'bootstrap'_      |  **_____**  |                *For CSS Styling*                 |
-|     Devise      |       _'devise'_        |  **_____**  |             *For User Authentication*            |
-|  Jquery Rails   |     _'jquery-rails'_    |  **_____**  |     *Bootstrap JavaScript depends on jQuery*     |
-|   Font Awesome  | '_font-awesome-rails'_  |  **_____**  |             *Use Font Awesome icon sets*         |
-|     Kaminari    |       _'kaminari'_      |  **_____**  |             *Use in pagination of posts*         |
-|     Rake        |         _'rake'_        | **< 11.0**  |      *Use for common administration tasks*       |
+|      Rails      |        _'rails'_        |  **6.1.4.1**  |    *Use for executing and rendering web-app*     |
+|   Postgresql    |          _'pg'_         |  **1.2.3**  | *Use postgres as the database for Active Record* |
+|    Bootstrap    |      _'bootstrap-sass'_      |  **3.4.1**  |                *For SCSS Styling*                 |
 |    BCrypt       |        _'bcrypt'_       |  **3.1.16** | *Secure hash algorithm for safely storing passwords* |
-|     Faker       |        _'faker'_        |  **1.1.2**  |               *Generates dummy users*            |
-| Will Paginate   |    _'will_paginate'_    |  **3.0.4**  |             *Use in pagination of users*         |
-|       ""        | _'bootstrap-will_paginate'_ |  **0.0.9**  |                         ""                       |
-|  RSpec Rails    |        _'rspec-rails'_      | **2.13.1**  |                 *Use for testing*                |
-|   SASS Rails    |        _'sass-rails'_       |  **4.0.3**  |             *Use SCSS for stylesheets*           |
 
 
 ----
