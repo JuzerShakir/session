@@ -1,8 +1,15 @@
 class SessionsController < ApplicationController
   def new
+    # if logged-in visitor manually tries to visit login page, will redirect them to user
+    current_visitor
+    if @current_visitor
+      flash[:warning] = "You're already logged in! If you want to login with different email, then sign out first."
+      redirect_to :root
+    end
   end
 
   def create
+
     # finds visitor with corresponding email, returns nil if not found or else a hash
     visitor = Visitor.find_by_email(params[:email])
 

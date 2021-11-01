@@ -7,7 +7,14 @@ class VisitorsController < ApplicationController
   end
 
   def new
-    @visitor = Visitor.new
+    # if logged-in visitor manually tries to visit signup page, will redirect them to user
+    current_visitor
+    if @current_visitor
+      flash[:warning] = "You're already logged in! If you want to sign up with different email, then sign out first."
+      redirect_to :root
+    else
+      @visitor = Visitor.new
+    end
   end
 
   def create
