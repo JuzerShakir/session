@@ -43,25 +43,52 @@ Following important gems were installed in these versions:
 
 ----
 
+## Setting up a PostgreSQL user
+
+If you don't have a user set on postgres, here's how to set new user:
+
+```bash
+sudo -u postgres createuser -s [username]
+```
+To set a password for this user, log in to the PostgreSQL command line client:
+```bash
+sudo -u postgres psql
+```
+Enter the following command to set the password:
+```bash
+\password your_password
+```
+Enter and confirm the password. Then exit the PostgreSQL client:
+```bash
+\q
+```
+
+-----
+
 ## 📋 Execution
 
 Run the following commands to execute locally:
 
 The following will install required version of ruby (make sure [rvm is installed](https://rvm.io/rvm/install).)
+
 ```bash
-rvm install x
+rvm use 2.7.2
 ```
 ```bash
-rvm use x
+git clone git@github.com:JuzerShakir/Session-CookieStore.git
 ```
 ```bash
-git clone git@github.com:JuzerShakir/project_name.git
-```
-```bash
-cd project_name
+cd Session-CookieStore
 ```
 ```bash
 bundle install
+```
+
+### 💡 Imp Note:
+> The `config/database.yml` has been added to `.gitignore` but a similar file `config/database.yml.clone` exists in its place. You will need to add your own postgresql username and password in the file. And then rename the file by:
+
+```bash
+git mv config/database.yml.clone config/database.yml
 ```
 ```bash
 rails db:setup
@@ -71,11 +98,7 @@ rails s
 ```
 
 To see this web-app up and running without executing above commands locally,
-I have deployed it on [Heroku](https://__name__.herokuapp.com/).
-
-Here's a short video where I go through the website:
-
-[![Video Thumbnail](assets/yt-thumbnail.png)](https://www.youtube.com/watch?v=VIDEO_ID "Project Name")
+I have deployed it on [Heroku](https://session-cookie-store.herokuapp.com/).
 
 -----
 
