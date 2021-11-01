@@ -1,4 +1,4 @@
-# Project: Project Name
+# Project: Session & Cookie
 *Tagline*
 
 <div align="center">
