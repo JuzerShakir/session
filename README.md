@@ -1,5 +1,5 @@
 # Project: Session & Cookie
-*Tagline*
+*This Rails application shows how a session is used with cookies from a client's browser.*
 
 <div align="center">
   <img src="assets/project_logo.png" />
