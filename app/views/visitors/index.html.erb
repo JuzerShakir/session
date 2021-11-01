@@ -1,29 +1,43 @@
-<% if @current_visitor %>
+<div id="home">
+  <% if @current_visitor %>
 
-  <p >The session will reset after you logout.</p>
-  <p>Registered email: <%= @current_visitor[:email] %> </p>
+    <p><b>Registered email: <%= @current_visitor[:email] %></b></p>
 
-  <br>
+    <br>
 
-  <p>Source code available <%= link_to 'here', "https://github.com/JuzerShakir/Session-CookieStore", target: :_blank %>.</p>
-  <p>My Next <%= link_to 'project', "", target: :_blank %>.</p>
+    <p><i>The session will reset after you logout.</i></p>
 
-<% else %>
+    <br>
 
-  <h2>Hey Devs, Welcome to my First Portfolio</h2>
-  <p align="center">This project is a demonstration of how to implement a session on Rails using the default session store, the <i>'CookieStore'</i>.</p>
+    <a href = "https://github.com/JuzerShakir/Session-CookieStore", target="blank">
+      <button type="button" class="btn btn-info">
+        Source code
+      </button>
+    </a>
 
-  <p align="center">To see this in action, <%= link_to "Sign Up", :new_visitor %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
+    <a href = "", target="blank">
+      <button type="button" class="btn btn-success">
+        Next Project
+      </button>
+    </a>
 
-  <p align="center">After signing up, you will be redirected to this page but now you will <b>no longer be able to see this content until you sign out.</b></p>
+  <% else %>
 
-<% end %>
+    <h2>Hey Devs, Welcome to my First Portfolio</h2>
+    <p>This project is a demonstration of how to implement a session on Rails using the default session store, the <i>'CookieStore'</i>.</p>
 
-<div id="visitor-count">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="alert-info">
-        Total visitors signed up: <b><%= pluralize(@total, "Visitor") %></b>
+    <p>To see this in action, <%= link_to "Sign Up", :new_visitor %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
+
+    <p>After signing up, you will be redirected to this page but now you will <b>no longer be able to see this content until you sign out.</b></p>
+
+  <% end %>
+
+  <div id="visitor-count">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="alert-info">
+          Total visitors signed up: <b><%= pluralize(@total, "Visitor") %></b>
+        </div>
       </div>
     </div>
   </div>

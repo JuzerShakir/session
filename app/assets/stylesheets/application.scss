@@ -51,6 +51,10 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+#home {
+  text-align: center;
+}
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
@@ -126,7 +130,7 @@ input {
     justify-content: center;
   }
   .alert-info  {
-    margin-top: 15px;
+    margin-top: 35px;
     margin-bottom: none;
     padding: 10px;
     text-align: center;
