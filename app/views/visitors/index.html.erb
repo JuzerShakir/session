@@ -1,8 +1,7 @@
 <% if @current_visitor %>
 
-  <p>The session will reset after you logout.</p>
+  <p >The session will reset after you logout.</p>
   <p>Registered email: <%= @current_visitor[:email] %> </p>
-  <p><%= pluralize(@total, "Visitor") %> signed up.</p>
 
   <br>
 
@@ -12,14 +11,20 @@
 <% else %>
 
   <h2>Hey Devs, Welcome to my First Portfolio</h2>
-  <p>This project is a demonstration of how to implement a session on Rails using the default session store, the <i>'CookieStore'</i>.</p>
+  <p align="center">This project is a demonstration of how to implement a session on Rails using the default session store, the <i>'CookieStore'</i>.</p>
 
-  <p>To see this in action, <%= link_to "Sign Up", :new_visitor %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
+  <p align="center">To see this in action, <%= link_to "Sign Up", :new_visitor %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
 
-  <p>After signing up, you will be redirected to this page but now you will <b>no longer be able to see this content until you sign out.</b></p>
-
-  <br>
-
-  <p><%= pluralize(@total, "Visitor") %> already signed up.</p>
+  <p align="center">After signing up, you will be redirected to this page but now you will <b>no longer be able to see this content until you sign out.</b></p>
 
 <% end %>
+
+<div id="visitor-count">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="alert-info">
+        Total visitors signed up: <b><%= pluralize(@total, "Visitor") %></b>
+      </div>
+    </div>
+  </div>
+</div>
