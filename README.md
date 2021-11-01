@@ -5,8 +5,6 @@
   <img src="project_logo.png" />
 </div>
 
-> *Description*
-
 ----
 
 ## ❗ Objectives
