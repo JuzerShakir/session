@@ -19,7 +19,7 @@
       <br>
     <% end %>
 
-    <%= form_with model: @visitor do | field | %>
+    <%= form_with model: @visitor, url: '/signup', method: 'post' do | field | %>
       <%= label_tag :email %><br>
       <%= field.email_field :email %>
 
