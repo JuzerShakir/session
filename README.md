@@ -43,7 +43,7 @@ Following important gems were installed in these versions:
 
 ----
 
-## Setting up a PostgreSQL user
+## ⚙️ Setting up a PostgreSQL user
 
 If you don't have a user set on postgres, here's how to set new user:
 
@@ -102,6 +102,8 @@ I have deployed it on [Heroku](https://session-cookie-store.herokuapp.com/).
 
 -----
 
-![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.repo_name&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
+![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.Session-CookieStore&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
 
-<a href="https://wakatime.com/badge/github/JuzerShakir/repo_name"><img src="https://wakatime.com/badge/github/JuzerShakir/repo_name.svg" alt="wakatime"></a>
+<a href="https://wakatime.com/badge/github/JuzerShakir/Session-CookieStore"><img src="https://wakatime.com/badge/github/JuzerShakir/Session-CookieStore.svg" alt="wakatime"></a>
+
+<a href="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/680d7b23-8d37-49c4-9f2e-38200088cb4b"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/680d7b23-8d37-49c4-9f2e-38200088cb4b.svg" alt="wakatime"></a>
