@@ -1,11 +1,13 @@
 <div id="home">
   <% if @current_visitor %>
 
-    <p><b>Registered email: <%= @current_visitor[:email] %></b></p>
+    <p><b>Session logged in as: <%= @current_visitor[:email] %></b></p>
 
     <br>
 
-    <p><i>The session will reset after you logout.</i></p>
+    <p>There are couple of ways to reset the session, either by <%= link_to "logging out", :logout, method: "delete" %> or by manually deleting the cookie.</p>
+
+    <p align="left">To manually delete the cookie, click on the lock icon located on the url bar of your browser, select 'Cookies' and then delete. Refresh the page and you will no longer be logged in!</p>
 
     <br>
 
@@ -29,6 +31,16 @@
     <p>To see this in action, <%= link_to "Sign Up", :new_visitor %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
 
     <p>After signing up, you will be redirected to this page but now you will <b>no longer be able to see this content until you sign out.</b></p>
+
+    <div class="note">
+      <div class="row">
+        <div class="col-md-7">
+          <div class="alert-danger">
+            <b>Note:</b> You won't be able to enable session if you have disabled cookies in your browser.
+          </div>
+        </div>
+      </div>
+    </div>
 
   <% end %>
 
