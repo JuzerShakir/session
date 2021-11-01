@@ -79,7 +79,8 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 2px solid #eaeaea;
-  color: #666;
+  color: #777;
+  font-size: 16px;
 
   a {
     color: #444;
@@ -87,10 +88,6 @@ footer {
     :hover {
       color: #222;
     }
-  }
-
-  small {
-    letter-spacing: 0.3px;
   }
 }
 
