@@ -2,7 +2,7 @@
 *This Rails application shows how a session is used with cookies from a client's browser.*
 
 <div align="center">
-  <img src="assets/project_logo.png" />
+  <img src="project_logo.png" />
 </div>
 
 > *Description*
