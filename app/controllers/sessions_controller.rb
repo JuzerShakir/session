@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     # if logged-in visitor manually tries to visit login page, will redirect them to user
     current_visitor
     if @current_visitor
-      flash[:warning] = "You're already logged in! If you want to login with different email, then sign out first."
+      flash[:warning] = "You're already logged in! If you want to login with different email, then logout first."
       redirect_to :root
     end
   end
