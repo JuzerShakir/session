@@ -106,4 +106,4 @@ I have deployed it on [Heroku](https://session-cookie-store.herokuapp.com/).
 
 <a href="https://wakatime.com/badge/github/JuzerShakir/Session-CookieStore"><img src="https://wakatime.com/badge/github/JuzerShakir/Session-CookieStore.svg" alt="wakatime"></a>
 
-<a href="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/680d7b23-8d37-49c4-9f2e-38200088cb4b"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/680d7b23-8d37-49c4-9f2e-38200088cb4b.svg" alt="wakatime"></a>
+<a href="https://wakatime.com/@JuzerShakir/projects/owabcydqge?start=2021-10-26&end=2021-11-01"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/680d7b23-8d37-49c4-9f2e-38200088cb4b.svg" alt="wakatime"></a>
