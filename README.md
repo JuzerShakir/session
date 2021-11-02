@@ -1,5 +1,5 @@
 # Project: Session & Cookie
-*This Rails application shows how a session is used with cookies from a client's browser.*
+*A responsive Rails webapp that uses cookies to maintain a session with clients' browsers.*
 
 <div align="center">
   <img src="project_logo.png" />
@@ -86,7 +86,7 @@ bundle install
 > The `config/database.yml` has been added to `.gitignore` but a similar file `config/database.yml.clone` exists in its place. You will need to add your own postgresql username and password in the file. And then rename the file by:
 
 ```bash
-git mv config/database.yml.clone config/database.yml
+mv config/database.yml.clone config/database.yml
 ```
 ```bash
 rails db:setup
