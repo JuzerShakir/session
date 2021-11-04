@@ -40,7 +40,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session.delete(:id)
+    # Used this method to destroy session to Countermeasure against Session Fixation. More on this: [https://guides.rubyonrails.org/security.html#session-fixation]
+    reset_session
     @current_visitor = nil
 
     flash[:info] = "You have successfully logged out."
