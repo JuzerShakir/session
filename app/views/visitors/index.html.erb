@@ -1,5 +1,5 @@
 <div id="home">
-  <% if logged_in? %>
+  <% if @current_visitor %>
 
     <p><b>Session logged in as: <%= @current_visitor[:email] %></b></p>
 

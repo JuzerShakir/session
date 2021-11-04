@@ -2,6 +2,7 @@ class VisitorsController < ApplicationController
 
   def index
     @total = Visitor.count
+    # if user is logged in create an instance variable to show user attribute values in view
     if logged_in?
       @current_visitor = Visitor.find(session[:id])
     end
