@@ -2,14 +2,14 @@ class VisitorsController < ApplicationController
 
   def index
     @total = Visitor.count
-    # will run method located in application_controller, will return nil for logged out user
-    current_visitor
+    if logged_in?
+      @current_visitor = Visitor.find(session[:id])
+    end
   end
 
   def new
-    # if logged-in visitor manually tries to visit signup page, will redirect them to user
-    current_visitor
-    if @current_visitor
+    # if logged-in visitor manually tries to visit signup page, will redirect them to root
+    if logged_in?
       flash[:warning] = "You're already logged in! If you want to sign up with different email, then logout first."
       redirect_to :root
     else

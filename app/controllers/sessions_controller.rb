@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
+
   def new
-    # if logged-in visitor manually tries to visit login page, will redirect them to user
-    current_visitor
-    if @current_visitor
+    # if logged-in visitor manually tries to visit login page, will redirect them to the root
+    if logged_in?
       flash[:warning] = "You're already logged in! If you want to login with different email, then logout first."
       redirect_to :root
     end
@@ -42,6 +42,7 @@ class SessionsController < ApplicationController
   def destroy
     # Used this method to destroy session to Countermeasure against Session Fixation. More on this: [https://guides.rubyonrails.org/security.html#session-fixation]
     reset_session
+    # not necessory but just in case
     @current_visitor = nil
 
     flash[:info] = "You have successfully logged out."
