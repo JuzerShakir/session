@@ -3,9 +3,14 @@ Rails.application.routes.draw do
   root to: 'visitors#index'
 
   get '/signup', to: 'visitors#new', as: 'signup'
+  # if user manually types 'create' instead of 'signup' in url, it should redirect to appropriate link
+  get '/create', to: redirect('/signup')
   post '/signup', to: 'visitors#create'
 
   get '/login', to: 'sessions#new', as: 'login'
+  # if user manually types 'signin' instead of 'login' in url, it should redirect to appropriate link
+  get '/signin', to: redirect('/login')
   post '/login', to: 'sessions#create'
+
   delete '/logout', to: 'sessions#destroy', as: 'logout'
 end
