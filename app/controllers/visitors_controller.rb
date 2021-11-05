@@ -38,7 +38,7 @@ class VisitorsController < ApplicationController
   end
 
   def not_found
-    flash[:danger] = "Page doesn't exist!"
+    flash[:danger] = "The link your looking for doesn't exist!"
     redirect_to :root
   end
 
