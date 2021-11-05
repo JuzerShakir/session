@@ -21,7 +21,8 @@ This web-app must accomplish the following:
 - [x] Show visitor sign up count to both logged out and logged in visitors.
 - [x] Redirect logged in visitor to homepage if he tries to visit log in or signup page.
 - [x] Build a responsive site using bootstrap.
-- [x] Show logged in visitors ways of destroying session.
+- [x] Show logged in visitors different ways of destroying the session.
+- [X] When a visitor manually enters a url that doesnt exist, redirect them to homepage with a flash message informing them that url doesn't exist.
 
 ----
 
