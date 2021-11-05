@@ -14,7 +14,7 @@
 
   <body>
 
-    <% if @current_visitor %>
+    <% if logged_in? %>
       <%= render 'layouts/signin-header' %>
     <% else %>
       <%= render 'layouts/header' %>
