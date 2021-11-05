@@ -37,6 +37,9 @@ class VisitorsController < ApplicationController
 
   end
 
+  def not_found
+  end
+
   private
     def visitor_params
       params.require(:visitor).permit(:email, :password, :password_confirmation)
