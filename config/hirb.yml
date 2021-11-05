@@ -1,0 +1,7 @@
+:output:
+  Visitor:
+    :options:
+      :fields:
+        - id
+        - email
+        - password_digest
