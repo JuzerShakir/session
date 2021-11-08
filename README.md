@@ -1,4 +1,4 @@
-# Project: Session & Cookie
+# Project: Session In Rails
 *A responsive Rails webapp that uses cookies to maintain a session with clients' browsers.*
 
 <div align="center">
@@ -74,7 +74,7 @@ The following will install required version of ruby (make sure [rvm is installed
 rvm use 2.7.2
 ```
 ```bash
-git clone git@github.com:JuzerShakir/Session-CookieStore.git
+git clone git@github.com:JuzerShakir/rails-session.git
 ```
 ```bash
 cd Session-CookieStore
@@ -97,11 +97,11 @@ rails s
 ```
 
 To see this web-app up and running without executing above commands locally,
-I have deployed it on [Heroku](https://session-cookie-store.herokuapp.com/).
+I have deployed it on [Heroku](https://rails-session.herokuapp.com/).
 
 -----
 
-![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.Session-CookieStore&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
+![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.rails-session&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
 
 
-<a href="https://wakatime.com/@JuzerShakir/projects/owabcydqge?start=2021-10-26"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/680d7b23-8d37-49c4-9f2e-38200088cb4b.svg" alt="wakatime"></a>
+<a href="https://wakatime.com/@JuzerShakir/projects/kwaqldewfx?start=2021-11-02"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/2ea4fb3b-6100-4a22-a419-68afbb0e1761.svg" alt="wakatime"></a>
