@@ -5,6 +5,12 @@
   <img src="project_logo.png" />
 </div>
 
+
+![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.rails-session&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
+
+
+<a href="https://wakatime.com/@JuzerShakir/projects/kwaqldewfx?start=2021-11-02"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/2ea4fb3b-6100-4a22-a419-68afbb0e1761.svg" alt="wakatime"></a>
+
 ----
 
 ## ❗ Objectives
@@ -100,8 +106,3 @@ To see this web-app up and running without executing above commands locally,
 I have deployed it on [Heroku](https://rails-session.herokuapp.com/).
 
 -----
-
-![](https://visitor-badge-reloaded.herokuapp.com/badge?page_id=juzershakir.rails-session&color=000000&lcolor=000000&style=for-the-badge&logo=Github)
-
-
-<a href="https://wakatime.com/@JuzerShakir/projects/kwaqldewfx?start=2021-11-02"><img src="https://wakatime.com/badge/user/ccef187f-4308-4666-920d-d0a9a07d713a/project/2ea4fb3b-6100-4a22-a419-68afbb0e1761.svg" alt="wakatime"></a>
