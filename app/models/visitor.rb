@@ -7,5 +7,4 @@ class Visitor < ApplicationRecord
 
   # setting length of password
   validates :password, length: { minimum: 6, maximum: 36 }
-  validates :password_confirmation, presence: true
 end
