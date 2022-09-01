@@ -1,18 +1,24 @@
 require "rails_helper"
 
 RSpec.feature "When creating visitor account" do
-    scenario "a new user can sign up" do
+    before do
         visit signup_path
-        fill_in "email", with: "test@yahoo.com"
-        fill_in "password", with: "123456"
-        fill_in "password_confirmation", with: "123456"
+        @new_visitor = Visitor.new(email: "new_user@yahoo.com",
+                            password: "123456", password_confirmation: "123456")
+        @existing_visitor = Visitor.create(email: "ext_user@aol.com",
+                            password: "123456", password_confirmation: "123456")
+    end
+
+    scenario "a new user can sign up" do
+        fill_in "email", with: "#{@new_visitor.email}"
+        fill_in "password", with: "#{@new_visitor.password}"
+        fill_in "password_confirmation", with: "#{@new_visitor.password_confirmation}"
         click_button "Create Visitor"
         expect(page).to have_content("Congrats! You have successfully logged in and a session has been created.")
         expect(page.current_path).to eq(root_path)
     end
 
     scenario "all fields should be filled" do
-        visit signup_path
         fill_in "email", with: ""
         fill_in "password", with: ""
         fill_in "password_confirmation", with: ""
@@ -23,5 +29,10 @@ RSpec.feature "When creating visitor account" do
         expect(page).to have_content("Password is too short (minimum is 6 characters)")
     end
 
-    scenario "an existing user cannot sign up"
+    scenario "an existing user cannot sign up again" do
+        fill_in "email", with: "#{@existing_visitor.email}"
+        click_button "Create Visitor"
+        expect(page.current_path).to eq(login_path)
+        expect(page).to have_content("#{@existing_visitor.email} is already in use! You can Log In with this email.")
+    end
 end
