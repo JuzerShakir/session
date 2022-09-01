@@ -16,6 +16,9 @@ RSpec.feature "When creating visitor account" do
         fill_in "password_confirmation", with: "#{@new_visitor.password_confirmation}"
         click_button "Create Visitor"
         expect(page.current_path).to eq(root_path)
+        within "header.navbar" do
+            expect(page).to have_content("Log Out")
+        end
         within "div.alert" do
             expect(page).to have_content("Congrats! You have successfully logged in and a session has been created.")
         end
