@@ -1,12 +1,8 @@
 <div id="home">
   <% if @current_visitor %>
-
-  <%= render "layouts/in-session" %>
-
+    <%= render "layouts/in-session" %>
   <% else %>
-
-  <%= render "layouts/not-in-session"%>
-
+    <%= render "layouts/not-in-session"%>
   <% end %>
 
   <div id="visitor-count">
