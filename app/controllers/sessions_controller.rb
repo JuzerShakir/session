@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
     elsif visitor == nil
       flash[:danger] = "Email doesn't exist! Please Sign up!"
       # .. then redirect them to signup page
-      redirect_to :new_visitor
+      redirect_to :signup
 
     # or else entered password is wrong
     else
