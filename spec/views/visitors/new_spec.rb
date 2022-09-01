@@ -3,10 +3,11 @@ require "rails_helper"
 RSpec.feature "When creating visitor account" do
     before do
         visit signup_path
+
         @new_visitor = Visitor.new(email: "new_user@yahoo.com",
-                            password: "123456", password_confirmation: "123456")
+            password: "123456", password_confirmation: "123456")
         @existing_visitor = Visitor.create(email: "ext_user@aol.com",
-                            password: "123456", password_confirmation: "123456")
+                password: "123456", password_confirmation: "123456")
     end
 
     scenario "a new user can sign up" do
@@ -17,6 +18,9 @@ RSpec.feature "When creating visitor account" do
         expect(page.current_path).to eq(root_path)
         within "div.alert" do
             expect(page).to have_content("Congrats! You have successfully logged in and a session has been created.")
+        end
+        within "div#visitor-count" do
+            expect(page).to have_content Visitor.all.count
         end
     end
 
