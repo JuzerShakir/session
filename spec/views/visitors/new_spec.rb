@@ -18,7 +18,9 @@ RSpec.feature "When creating visitor account" do
         fill_in "password_confirmation", with: ""
         click_button "Create Visitor"
         expect(page.current_path).to eq(signup_path)
-        expect(page).to have_content("The form contains 3 errors.")
+        expect(page).to have_content("Password can't be blank")
+        expect(page).to have_content("Email is in nvalid format!")
+        expect(page).to have_content("Password is too short (minimum is 6 characters)")
     end
 
     scenario "an existing user cannot sign up"
