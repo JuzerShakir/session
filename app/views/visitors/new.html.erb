@@ -21,17 +21,17 @@
 
     <%= form_with model: @visitor, url: '/signup', method: 'post' do | field | %>
       <%= label_tag :email %><br>
-      <%= field.email_field :email %>
+      <%= field.email_field :email, id: "email" %>
 
       <br><br>
 
       <%= label_tag :password %><br>
-      <%= field.password_field :password %>
+      <%= field.password_field :password, id: "password" %>
 
       <br><br>
 
       <%= label_tag :confirm_password %><br>
-      <%= field.password_field :password_confirmation %>
+      <%= field.password_field :password_confirmation, id: "password_confirmation"  %>
 
       <br><br>
 
