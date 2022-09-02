@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'invalid/not_found'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'visitors#index'
 
@@ -15,6 +16,6 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy', as: 'logout'
 
   # if a visitor manually types any url that isn't mentioned in routes it will show a specific page saying page not found
-  get ':not_found', to: 'visitors#not_found', constraints: { not_found: /.*/ }
+  get ':not_found', to: 'invalid#not_found', constraints: { not_found: /.*/ }
 
 end
