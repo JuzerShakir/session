@@ -1,9 +1,5 @@
 require "rails_helper"
 
-# scenario "email should be valid"
-# scenario "email should be unique"
-# scenario "password and password confirmation field should match"
-
 RSpec.describe Visitor, :type => :model do
     subject { described_class.new(
         email: "test@aol.com",
