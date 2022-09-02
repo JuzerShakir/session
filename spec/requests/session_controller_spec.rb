@@ -35,6 +35,8 @@ RSpec.describe SessionsController, type: :request do
             expect(response).to have_http_status(:found)
             expect(flash[:info]).to match(/You have successfully logged out./)
             expect(response).to redirect_to root_path
+            get root_path
+            expect(response.body).to include("Log In")
         end
     end
 end
