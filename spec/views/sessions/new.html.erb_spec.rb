@@ -24,5 +24,10 @@ RSpec.feature "On login page" do
         expect(page.current_path).to eq(signup_path)
         within "div.alert" do expect(page).to have_content("Email doesn't exist! Please Sign up!") end
     end
-    scenario "if fields are empty"
+
+    scenario "if fields are empty" do
+        click_button "Sign In"
+        expect(page.current_path).to eq(login_path)
+        within "div.alert" do expect(page).to have_content("Fields cannot be empty!") end
+    end
 end
