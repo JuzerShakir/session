@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       session[:id] = visitor.id
       flash[:success] = "Welcome Back! A session has been created."
       # home page
-      redirect_to :root
+      redirect_to root_path
 
     # if any input fields are blank
     elsif params[:email].blank? || params[:password].blank?
