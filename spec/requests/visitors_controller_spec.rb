@@ -10,6 +10,10 @@ RSpec.describe VisitorsController, type: :request do
             expect(response).to have_http_status(:ok)
         end
 
+        it "should return number of visitors signed up" do
+            expect(response.body).to include("#{Visitor.count}")
+        end
+
         describe "must have different views" do
             it "if user is logged-out" do
                 session[:id] = nil
@@ -41,6 +45,8 @@ RSpec.describe VisitorsController, type: :request do
             expect(response).to have_http_status(:found)
             expect(response).to redirect_to root_path
             expect(session[:id]).to_not be_nil
+            get root_path
+            expect(response.body).to include("#{Visitor.count}")
         end
     end
 end
