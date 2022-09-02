@@ -36,7 +36,7 @@ RSpec.feature "When creating visitor account" do
 
         within "div#error_explanation" do
             expect(page).to have_content("Password can't be blank")
-            expect(page).to have_content("Email is in nvalid format!")
+            expect(page).to have_content("Email is in invalid format!")
             expect(page).to have_content("Password is too short (minimum is 6 characters)")
         end
     end

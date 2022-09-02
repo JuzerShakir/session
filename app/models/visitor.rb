@@ -3,7 +3,7 @@ class Visitor < ApplicationRecord
   has_secure_password
 
   # only valid email format allowed
-  validates :email, format: { with: /\A[^@\s]+@(?:[-a-z0-9]+\.)+[a-z]{2,}\z/i, message: "is in nvalid format!"}, uniqueness: true
+  validates_email_format_of :email, message: "is in invalid format!"
 
   # setting length of password
   validates :password, length: { minimum: 6, maximum: 36 }
