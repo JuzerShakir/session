@@ -28,7 +28,6 @@ gem 'rename'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
-gem 'hirb'
 gem 'validates_email_format_of'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
