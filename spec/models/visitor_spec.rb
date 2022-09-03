@@ -1,11 +1,7 @@
 require "rails_helper"
 
 RSpec.describe Visitor, :type => :model do
-    subject { described_class.new(
-        email: "test@aol.com",
-        password: "123456",
-        password_confirmation: "123456"
-    ) }
+    subject { build(:visitor) }
 
     it "email should be valid" do
         ValidatesEmailFormatOf::validate_email_format(subject.email)
