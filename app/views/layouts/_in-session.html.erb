@@ -1,0 +1,21 @@
+<p><b>Session logged in as: <%= @current_visitor[:email] %></b></p>
+
+<br>
+
+<p>There are couple of ways to reset the session, either by <%= link_to "logging out", :logout, method: "delete" %> or by manually deleting the cookie.</p>
+
+<p align="left">To manually delete the cookie, click on the lock icon located on the url bar of your browser, select 'Cookies' and then delete. Refresh the page and you will no longer be logged in!</p>
+
+<br>
+
+<a href = "https://github.com/JuzerShakir/rails-session", target="blank">
+    <button type="button" class="btn btn-info">
+    Source code
+    </button>
+</a>
+
+<a href = "https://rails-authenticate.herokuapp.com/", target="blank">
+    <button type="button" class="btn btn-success">
+    Next Project
+    </button>
+</a>

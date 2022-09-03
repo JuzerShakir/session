@@ -25,7 +25,7 @@ class VisitorsController < ApplicationController
       @visitor.save
       session[:id] = @visitor.id
       flash[:success] = "Congrats! You have successfully logged in and a session has been created."
-      redirect_to :root
+      redirect_to root_path
 
     elsif Visitor.exists?(email: @visitor.email)
       flash[:warning] = "#{@visitor.email} is already in use! You can Log In with this email."
@@ -35,11 +35,6 @@ class VisitorsController < ApplicationController
       render :new
     end
 
-  end
-
-  def not_found
-    flash[:danger] = "The link your looking for doesn't exist!"
-    redirect_to :root
   end
 
   private

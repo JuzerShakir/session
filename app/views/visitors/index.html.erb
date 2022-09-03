@@ -1,47 +1,8 @@
 <div id="home">
   <% if @current_visitor %>
-
-    <p><b>Session logged in as: <%= @current_visitor[:email] %></b></p>
-
-    <br>
-
-    <p>There are couple of ways to reset the session, either by <%= link_to "logging out", :logout, method: "delete" %> or by manually deleting the cookie.</p>
-
-    <p align="left">To manually delete the cookie, click on the lock icon located on the url bar of your browser, select 'Cookies' and then delete. Refresh the page and you will no longer be logged in!</p>
-
-    <br>
-
-    <a href = "https://github.com/JuzerShakir/rails-session", target="blank">
-      <button type="button" class="btn btn-info">
-        Source code
-      </button>
-    </a>
-
-    <a href = "https://rails-authenticate.herokuapp.com/", target="blank">
-      <button type="button" class="btn btn-success">
-        Next Project
-      </button>
-    </a>
-
+    <%= render "layouts/in-session" %>
   <% else %>
-
-    <h2>Hey Devs, Welcome to my First Rails Project</h2>
-    <p>This project is a demonstration of how to implement a session on Rails using the default session store, the <i>'CookieStore'</i>.</p>
-
-    <p>To see this in action, <%= link_to "Sign Up", :signup %> with an email (it could be any as long as its in valid email format) and password (mimimum of 6 characters).</p>
-
-    <p>After signing up, you will be redirected to this page but now you will <b>no longer be able to see this content until you sign out.</b></p>
-
-    <div class="note">
-      <div class="row">
-        <div class="col-md-7">
-          <div class="alert-danger">
-            <b>Note:</b> You won't be able to enable session if you have disabled cookies in your browser.
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <%= render "layouts/not-in-session"%>
   <% end %>
 
   <div id="visitor-count">
