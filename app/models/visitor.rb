@@ -4,6 +4,7 @@ class Visitor < ApplicationRecord
 
   # only valid email format allowed
   validates_email_format_of :email, message: "is in invalid format!"
+  validates :email, uniqueness: true
 
   # setting length of password
   validates :password, length: { minimum: 6, maximum: 36 }
