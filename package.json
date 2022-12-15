@@ -1,5 +1,5 @@
 {
-  "name":"rails_session",
+  "name":"session",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
