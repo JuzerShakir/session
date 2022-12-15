@@ -1,6 +1,6 @@
-# Project: Session In Rails
+# Project: Creating Session in Browser
 
-_A responsive Rails webapp that uses cookies to maintain a session with clients' browsers._
+_A Rails webapp that uses cookies to maintain a session with clients' browsers._
 
 <div align="center">
   <img src="project_logo.png" />
