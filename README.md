@@ -105,8 +105,3 @@ rails db:setup
 ```bash
 rails s
 ```
-
-To see this web-app up and running without executing above commands locally,
-I have deployed it on [Heroku](https://rails-session.herokuapp.com/).
-
----
