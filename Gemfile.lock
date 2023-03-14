@@ -119,6 +119,8 @@ GEM
     mini_portile2 (2.8.1)
     minitest (5.18.0)
     msgpack (1.4.2)
+    net-http (0.3.2)
+      uri
     net-imap (0.3.4)
       date
       net-protocol
@@ -229,6 +231,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    uri (0.12.0)
     validates_email_format_of (1.7.2)
       i18n
     web-console (4.1.0)
@@ -264,6 +267,7 @@ DEPENDENCIES
   factory_bot_rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  net-http (~> 0.3.2)
   pg
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
